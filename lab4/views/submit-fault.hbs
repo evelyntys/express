@@ -1,0 +1,23 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<div class="container" id="fault-form">
+<p>please submit the details in the form below</p>
+<img src="/cat.jpg" style="height: 100px">
+<div class="mb-3">
+  <label for="name" class="form-label">name</label>
+  <input type="name" class="form-control" id="name" placeholder="john smith">
+</div>
+<div class="mb-3">
+  <label for="email" class="form-label">email</label>
+  <input type="email" class="form-control" id="email" placeholder="johnsmith@email.com">
+</div>
+<div class="mb-3">
+  <label for="details" class="form-label">details of the fault</label>
+  <textarea class="form-control" id="details" rows="3"></textarea>
+</div>
+ <button id="submitBtn" type="submit" class="btn btn-primary mb-3">submit complaint</button>
+ </div>
+{{/block}}
+
+{{/extends}}

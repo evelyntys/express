@@ -1,0 +1,27 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+{{!-- if never put post, default method is get and it will just keep sending a new form to user --}}
+<h1>calculate your bmi</h1>
+<form method="POST">
+    <div>
+        <label class="form-label">weight(in kg for metric, pounds for imperial)</label>
+        <input type="text" class="form-control" name="weight">
+    </div>
+    <div>
+        <label class="form-label">height(in metres for metric, inches for imperial)</label>
+        <input type="text" class="form-control" name="height">
+    </div>
+
+    <div>
+        <label class="form-label">select units of measurement:</label>
+        <input type="radio" class="form-check-input" name="units" value="metric" checked>
+        <label class="form-check-label">metric (kg, m) </label>
+        <input type="radio" class="form-check-input" name="units" value="imperial">
+        <label class="form-check-label">imperial (pounds, inches)</label>
+
+    </div>
+
+    <input type="submit" class="btn btn-danger mt-3" value="calculate bmi">
+</form>
+{{/block}}
+{{/extends}}

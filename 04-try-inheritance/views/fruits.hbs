@@ -1,0 +1,39 @@
+{{#extends 'base'}}
+
+{{#block 'content'}}
+<div class="container mx-5">
+    <h1>fruit list</h1>
+<ul class="list-group">
+    {{#each fruits}}
+    <li class="list-group-item">{{this}}</li>
+    {{/each}}
+</ul>
+</div>
+
+<div class="container mx-5">
+    <h1>food</h1>
+<ul class="list-group">
+    {{#each dishes}}
+    <li class="list-group-item">
+        <h2>{{this.name}}</h2>
+        <h4>calories: {{this.calories}}</h4>
+        </li>
+    {{/each}}
+</ul>
+</div>
+
+{{#if favouriteDrink}}
+<div class="container mx-5">
+    <h1>favourite drink: <span class="fs-6">{{favouriteDrink}}</span></h1>
+</div>
+{{/if}}
+
+{{#ifEquals favouriteDrink "milo peng"}}
+<h1>your fave drink is milo peng</h1>
+{{else}}
+<h1>your fave drink is NOT milO PENG</h1>
+{{/ifEquals}}
+
+{{/block}}
+
+{{/extends}}

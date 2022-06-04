@@ -1,0 +1,49 @@
+{{#extends 'base'}}
+
+{{#block 'content'}}
+
+{{!-- http request - ip address, get(want response from server that contains some information) --}}
+{{!-- post tells server that you want to add new data --}}
+{{!-- just declaration of intention, still have to code to get data in server --}}
+<form method="POST">
+    <div>
+        <label>enter the food name</label>
+        <input type="text" class="form-control" name="foodName"/>
+    </div>
+    <div>
+        <label>enter the calories</label>
+        <input type="text" class="form-control" name="calories"/>
+    </div>
+
+    <div>
+        <label>select meal:</label>
+        <input type="radio" class="form-check-input" name="meal" value="breakfast">
+        <label class="form-check-label">breakfast</label>
+        <input type="radio" class="form-check-input" name="meal" value="lunch">
+        <label class="form-check-label">lunch</label>
+        <input type="radio" class="form-check-input" name="meal" value="dinner">
+        <label class="form-check-label">dinner</label>
+        <input type="radio" class="form-check-input" name="meal" value="snack">
+        <label class="form-check-label">snack</label>
+    </div>
+
+    <div>
+        <label>select tag:</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="homecooked">
+        <label class="form-check-label">homecooked</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="oily">
+        <label class="form-check-label">oily</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="vegan">
+        <label class="form-check-label">vegan</label>
+        <input type="checkbox" class="form-check-input" name="tags" value="healthy">
+        <label class="form-check-label">healthy</label>
+    </div>
+
+
+    
+    {{!-- submit button has to be inside the form --}}
+    <input type = 'submit' class="btn btn-primary mt-3" value="submit"/>
+</form>
+{{/block}}
+
+{{/extends}}
