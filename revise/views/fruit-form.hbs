@@ -1,0 +1,34 @@
+{{#extends 'base'}}
+{{#block 'title'}}
+fruit list
+{{/block}}
+
+{{#block 'content'}}
+
+<div class="container mt-3">
+    <h1>fruits</h1>
+    <form method="POST">
+        {{!-- key name in object is value of name attribute --}}
+        <div>
+            <input type="checkbox" class="fruits" value="durian" name="items">
+            <label>durian ($15.00)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="fruits" value="apple" name="items">
+            <label>apple($3.00)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="fruits" value="orange" name="items">
+            <label>orange($6.00)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="fruits" value="bananas" name="items">
+            <label>bananas($4.00)</label>
+        </div>
+        <input type="submit" class="bg-danger">
+    </form>
+</div>
+
+{{/block}}
+
+{{/extends}}
