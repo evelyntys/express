@@ -1,0 +1,30 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<h1>food sightings</h1>
+<a href="/food_sighting/create" class="btn btn-warning">create a new listing</a>
+<table class="mt-3 table">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Food</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    {{#each foodSightings}}
+    <tr>
+        <td>{{this._id}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.food}}</td>
+        <td>{{this.datetime}}</td>
+        <td>
+            <a href="/food_sighting/edit/{{this._id}}" class="btn btn-warning btn-sm">edit</a>
+            <a href="/food_sighting/delete/{{this._id}}" class="btn btn-danger btn-sm">delete</a>
+        </td>
+
+        </tr>
+
+    {{/each}}
+</table>
+
+{{/block}}
+{{/extends}}

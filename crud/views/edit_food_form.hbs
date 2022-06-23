@@ -1,0 +1,21 @@
+{{#extends "base"}}
+{{#block 'content'}}
+{{!-- modern browser dont support patch put and delete --}}
+<form method='POST'>
+    <div>
+        <label>description</label>
+        <input type="text" name ='description' class="form-control" value="{{description}}">
+    </div>
+     <div>
+        <label>food</label>
+        <input type="text" name ='food' class="form-control" placeholder="enter food separated by commas" value = "{{food}}">
+    </div>
+     <div>
+        <label>date and time</label>
+        <input type="datetime-local" name ='datetime' class="form-control "value="{{datetime}}">
+    </div>
+    <input type="submit" value="update food">
+</form>
+
+{{/block}}
+{{/extends}}

@@ -1,0 +1,22 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<div class="container mt-3">
+    <h1>edit movie details</h1>
+    <form method="POST">
+    <div>
+        <label>title of movie</label>
+        <input type="text" name="title" class="form-control" value="{{title}}">
+
+    </div>
+    <div>
+         <label>plot of movie</label>
+        <input type="text" name="plot" class="form-control" value="{{plot}}">
+    </div>
+    <input type="submit" value="edit movie" class="btn btn-danger mt-3">
+    </form>
+</div>
+
+{{/block}}
+{{/extends}}
+
+{{!-- <main></main> <-- main part of the webpage inside main --}}
